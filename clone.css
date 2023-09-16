@@ -1,0 +1,345 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    background-color: #0c111b;
+    width: 100%;
+    height: 190vh;
+}
+
+.navbar {
+    color: #fff;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 9;
+    align-items: center;
+    top: 0%;
+    background-color: #0c111b;
+}
+
+.navbar img {
+    height: 40px;
+    width: 120px;
+    top: 0px;
+    margin-left: 100px;
+}
+
+.navbar img:hover {
+    cursor: pointer;
+}
+
+.navbar ul {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    display: flex;
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    padding: 38px 15px;
+}
+
+.navbar ul li:hover {
+    cursor: pointer;
+    color: #f9f9f9;
+}
+
+.right {
+    display: block;
+    margin-left: auto;
+    margin-top: 2px;
+}
+
+
+.searchbox {
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    text-align: start;
+    font-size: 16px;
+    font-weight: 500px;
+    width: 250px;
+    height: 40px;
+    padding-top: 12px;
+    transition: .5s;
+}
+
+.searchbox:focus {
+    width: 350px;
+    border-color: #1f80e0;
+}
+
+.btn {
+    height: 25px;
+    width: 100px;
+    margin: 0 15px;
+    background-color: #1f80e0;
+    color: #fff;
+    font-family: "Roboto", "HelveticaNeue-Light";
+    sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 4px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+
+.login {
+    font-size: 14px;
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-right: 48px;
+    opacity: 0.9;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding: 20px 0;
+    overflow-x: hidden;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.carousel {
+    display: flex;
+    width: 92%;
+    height: 90%;
+    position: relative;
+    margin: auto;
+    background: #000;
+    border-radius: 10px;
+}
+
+.slider {
+    flex: 0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 3;
+
+}
+
+.slider img {
+    width: 70%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    z-index: 1;
+}
+
+.slide-content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #030b17 60%, #0c111b00);
+    color: #fff;
+}
+
+.movie-title {
+    padding-left: 50px;
+    margin-top: 80px;
+    text-transform: capitalize;
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    font-size: 28px;
+}
+
+.movie-desc {
+    width: 55%;
+    line-height: 30px;
+    padding-left: 50px;
+    margin-top: 30px;
+    opacity: 0.8;
+    overflow-wrap: break-word;
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    font-size: 16px;
+    color: #FFFFFFCC;
+}
+
+.title {
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 4%;
+    font-weight: 500px;
+    display: inline-block;
+}
+
+.title:hover {
+    cursor: pointer;
+    color: #1f80e0;
+}
+
+.poster-container {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 15px 0px 20px;
+}
+
+.poster-card {
+    position: absolute;
+    width: 92%;
+    height: 220px;
+    padding-left: 60px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+}
+
+.poster-card::-webkit-scrollbar {
+    display: none;
+}
+
+.poster {
+    position: relative;
+    min-width: 150px;
+    width: 160px;
+    height: 220px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: .5s;
+    background: #000;
+}
+
+.photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.poster:hover {
+    transform: scale(1.1);
+}
+
+.poster:hover .poster-body {
+    opacity: 1;
+}
+
+.poster-body {
+    opacity: 0;
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 100%);
+    padding: 10px 30px;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 60%;
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    text-align: center;
+}
+
+.desc {
+    color: #fff;
+    opacity: 0.8;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    text-align: center;
+}
+
+.watchlist-btn {
+    position: absolute;
+    width: 90%;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 9px 30px 5px -22px;
+    cursor: pointer;
+    padding: 5px 0px 3px 15px;
+    border-radius: 5px;
+
+}
+
+.watchlist-btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 1px;
+    width: 35px;
+    height: 35px;
+    background-image: url(images/add.png);
+    background-size: cover;
+    transform: scale(0.4);
+
+}
+
+.watchlist-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.pre-btn,
+.next-btn {
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 3;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.pre-btn {
+    left: 0;
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+
+.next-btn {
+    right: 0;
+    background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+}
+
+.pre-btn img,
+.next-btn img {
+    width: 15px;
+    height: 20px;
+    opacity: 0;
+
+}
+
+.pre-btn img,
+.next-btn img:hover {
+    opacity: 1;
+}
